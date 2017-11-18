@@ -1,5 +1,5 @@
 import pandas as pd
-from sklearn import tree
+from sklearn.ensemble import RandomForestClassifier
 import numpy as np
 
 from data_process import process_train_data
@@ -13,7 +13,7 @@ features_train, labels_train, features_test, labels_test = process_train_data(tr
 # print features_test
 
 print "start training"
-clf = tree.DecisionTreeClassifier()
+clf = RandomForestClassifier()
 clf.fit(features_train, labels_train)
 
 print [clf.predict(features_test[0:1]), labels_test[0:1]]
