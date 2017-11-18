@@ -18,4 +18,4 @@ clf.fit(features_train, labels_train)
 
 print clf.predict(features_test[0:1])
 print labels_test[0:1]
-print clf.score(features_test, labels_train)
+print clf.score(features_test, labels_test)
